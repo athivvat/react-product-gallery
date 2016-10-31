@@ -12,7 +12,8 @@ module.exports = {
   ],
   output: {
     path: __dirname + '/dist',
-    filename: "index_bundle.js"
+    filename: "index_bundle.js",
+    publicPath: "/assets/"
   },
   module: {
     loaders: [
@@ -20,6 +21,13 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: "babel-loader"
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loaders: [
+          'url?limit=8192',
+          'img'
+        ]
       }
     ]
   },
