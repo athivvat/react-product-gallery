@@ -1,5 +1,6 @@
 # React product gallery
 React product gallery component
+![example](https://cloud.githubusercontent.com/assets/1852117/19896501/1bee48ca-a087-11e6-8c01-972ad37f85ce.jpg)
 
 # MIT License
 
