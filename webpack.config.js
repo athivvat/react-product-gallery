@@ -12,24 +12,25 @@ module.exports = {
   ],
   output: {
     path: __dirname + '/dist',
-    filename: "index_bundle.js",
-    publicPath: "/assets/"
+    publicPath: '/',
+    filename: "bundle.js"
   },
   module: {
     loaders: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: "babel-loader"
+        loader: 'babel'
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        loaders: [
-          'url?limit=8192',
-          'img'
-        ]
+        test: /\.(jpe?g|png)$/,
+        exclude: /node_modules/,
+        loader: 'url-loader?limit=100000&name=images/[name].[ext]'
       }
     ]
+  },
+  devServer: {
+    contentBase: 'dist'
   },
   plugins: [HtmlWebpackPluginConfig]
 }
