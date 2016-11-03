@@ -34,11 +34,13 @@ let thumbControl = {
 };
 
 let closeZoomContainer = {
-  display: 'none',
+  visibility: 'hidden',
+  opacity: 0
 }
 
 let openZoomContainer = {
-  display: 'block',
+  visibility: 'visible',
+  opacity: 1,
   position: 'absolute',
   width: '100%',
   height: 750,
