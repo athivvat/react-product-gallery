@@ -1,0 +1,43 @@
+.thumbnail {
+  cursor: pointer;
+  display: block;
+  margin-bottom: 25px;
+}
+img {
+  max-width: 100%;
+}
+.arrow {
+    margin: 0 auto;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-top: 1px solid #333333;
+    border-right: 1px solid #333333;
+    border-left: 0;
+    border-bottom: 0;
+    opacity: 1;
+}
+.prev {
+  composes: arrow;
+  -webkit-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  -o-transform: rotate(315deg);
+  transform: rotate(315deg);
+}
+.next {
+  composes: arrow;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.overlay {
+  border:1px solid black;
+  width:350px;
+  height:200px;
+  display:inline-block;
+  background-image:url('http://ginger-mum.com/wp-content/uploads/2015/10/3633-1269758855-0da5042c33400a811a5d766be4579cb8.jpg');
+  background-repeat:no-repeat;
+}
